@@ -1,0 +1,16 @@
+==> Starting nemotron-3.5-super-vl: profile=default max-num-seqs=24 kv=19GiB context=1048576 port=127.0.0.1:8000
+==> 25s: Loading fastsafetensors
+==> 40s: Loading weights
+==> 45s: Model loading took
+==> 76s: Autotun
+==> 166s: Capturing CUDA graphs
+==> 172s: init engine
+==> Ready after 177s
+==> Smoke test passed (pong).
+==> Serving nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 as "nemotron-3.5-super-vl"
+    OpenAI API : http://127.0.0.1:8000/v1   (bound to 127.0.0.1:8000)
+    Profile    : default, up to 24 concurrent sequences, 1048576-token context
+    Memory     : 13.7 GiB still available to the host
+    Logs       : docker logs -f nemotron-3.5-super-vl
+    Stop       : ./stop.sh
+rc=0

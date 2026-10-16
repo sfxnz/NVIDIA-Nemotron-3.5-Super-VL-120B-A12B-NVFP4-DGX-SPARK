@@ -1,0 +1,10 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets decode, levels 1,2,4,8,16,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f4-final-default/bench
+{"cell": "decode_c1_greedy", "wall_s": 138.4, "completed": 16, "failed": 0, "output_tok_s": 39.8, "ttft_p50_ms": 365, "ttft_p99_ms": 629, "tpot_p50_ms": 23.4, "preemptions": 0, "per_user_tok_s": 42.7, "accept_len": 4.36}
+{"cell": "decode_c1_card_sampling", "wall_s": 116.7, "completed": 8, "failed": 0, "output_tok_s": 40.8, "ttft_p50_ms": 366, "ttft_p99_ms": 622, "tpot_p50_ms": 21.04, "preemptions": 0, "per_user_tok_s": 47.5, "accept_len": 4.43}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 39.8 | 42.7 | 365 ms | - | 4.36 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 40.8 | 47.5 | 366 ms | - | 4.43 | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f4-final-default/bench/summary.md
+rc=0

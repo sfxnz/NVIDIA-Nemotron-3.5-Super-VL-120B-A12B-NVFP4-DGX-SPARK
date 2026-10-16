@@ -1,0 +1,22 @@
+==> Downloading nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr @ 7c7221ae into /home/sfxnz/projects/data/hf-firstrun-test (resumable)
+[90mHint: The `hf-cli` skill is not installed. Run `hf skills add -g` to teach your AI agents how to use the `hf` CLI.[0m
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  9.23it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 5 files: 100%|██████████| 5/5 [00:12<00:00,  2.58s/it]Fetching 5 files: 100%|██████████| 5/5 [00:12<00:00,  2.43s/it]
+[32m✓ Downloaded[0m
+  path: /hf/hub/models--nvidia--NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr/snapshots/7c7221aeb4cb3139307aa457f7dce11a8fb6ceb2
+==> Starting nemotron-3.5-super-vl: profile=default max-num-seqs=32 kv=19GiB context=262144 images=4 port=127.0.0.1:8000
+==> 25s: Loading fastsafetensors
+==> 40s: Loading weights
+==> 45s: Model loading took
+==> 55s: Autotun
+==> 80s: Capturing CUDA graphs
+==> 90s: init engine
+==> Ready after 95s
+==> Smoke test passed (pong).
+==> Serving nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 as "nemotron-3.5-super-vl"
+    OpenAI API : http://127.0.0.1:8000/v1   (bound to 127.0.0.1:8000)
+    Profile    : default, up to 32 concurrent sequences, KV pool 19 GiB, 262144-token context
+    Memory     : 13.9 GiB still available to the host
+    Logs       : docker logs -f nemotron-3.5-super-vl
+    Stop       : ./stop.sh
+rc=0

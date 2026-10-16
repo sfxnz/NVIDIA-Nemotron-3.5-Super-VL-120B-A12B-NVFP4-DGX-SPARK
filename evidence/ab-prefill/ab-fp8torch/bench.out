@@ -1,0 +1,17 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets decode,prefill, levels 1,2,4,8,16,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-fp8torch/bench
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "decode_c1_greedy", "wall_s": 241.2, "completed": 32, "failed": 0, "output_tok_s": 40.0, "ttft_p50_ms": 409, "ttft_p99_ms": 607, "tpot_p50_ms": 22.15, "preemptions": 0, "per_user_tok_s": 45.1, "accept_len": 4.57}
+{"cell": "decode_c1_card_sampling", "wall_s": 239.8, "completed": 16, "failed": 0, "output_tok_s": 35.9, "ttft_p50_ms": 354, "ttft_p99_ms": 600, "tpot_p50_ms": 27.49, "preemptions": 0, "per_user_tok_s": 36.4, "accept_len": 3.98}
+{"cell": "prefill_8k", "wall_s": 16.7, "completed": 3, "failed": 0, "output_tok_s": 0.3, "ttft_p50_ms": 3112, "ttft_p99_ms": 3148, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_32k", "wall_s": 33.0, "completed": 2, "failed": 0, "output_tok_s": 0.1, "ttft_p50_ms": 12673, "ttft_p99_ms": 12673, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_128k", "wall_s": 69.2, "completed": 1, "failed": 0, "output_tok_s": 0.0, "ttft_p50_ms": 61459, "ttft_p99_ms": 61459, "tpot_p50_ms": 0.0, "preemptions": 0}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 40.0 | 45.1 | 409 ms | - | 4.57 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 35.9 | 36.4 | 354 ms | - | 3.98 | 0 |
+| prefill, 8192 random tokens, max-concurrency 1 | 0.3 | - | 3112 ms | 2632 | - | 0 |
+| prefill, 32768 random tokens, max-concurrency 1 | 0.1 | - | 12673 ms | 2586 | - | 0 |
+| prefill, 131072 random tokens, max-concurrency 1 | 0.0 | - | 61459 ms | 2133 | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-fp8torch/bench/summary.md
+rc=0

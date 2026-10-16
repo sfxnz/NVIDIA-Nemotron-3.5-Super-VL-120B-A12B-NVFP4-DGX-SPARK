@@ -1,0 +1,17 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 192, sets decode,sweep, levels 1,32,192
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/tv1-throughput/bench
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "decode_c1_greedy", "wall_s": 491.1, "completed": 32, "failed": 0, "output_tok_s": 19.0, "ttft_p50_ms": 315, "ttft_p99_ms": 526, "tpot_p50_ms": 51.48, "preemptions": 0, "per_user_tok_s": 19.4}
+{"cell": "decode_c1_card_sampling", "wall_s": 444.5, "completed": 16, "failed": 0, "output_tok_s": 19.2, "ttft_p50_ms": 263, "ttft_p99_ms": 479, "tpot_p50_ms": 51.53, "preemptions": 0, "per_user_tok_s": 19.4}
+{"cell": "sweep_c1", "wall_s": 145.2, "completed": 8, "failed": 0, "output_tok_s": 19.1, "ttft_p50_ms": 239, "ttft_p99_ms": 479, "tpot_p50_ms": 51.45, "preemptions": 0, "per_user_tok_s": 19.4}
+{"cell": "sweep_c32", "wall_s": 277.5, "completed": 96, "failed": 0, "output_tok_s": 101.0, "ttft_p50_ms": 1047, "ttft_p99_ms": 3254, "tpot_p50_ms": 274.09, "preemptions": 0, "per_user_tok_s": 3.6}
+{"cell": "sweep_c192", "wall_s": 585.2, "completed": 576, "failed": 0, "output_tok_s": 304.5, "ttft_p50_ms": 1935, "ttft_p99_ms": 17599, "tpot_p50_ms": 545.04, "preemptions": 0, "per_user_tok_s": 1.8}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 19.0 | 19.4 | 315 ms | - | - | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 19.2 | 19.4 | 263 ms | - | - | 0 |
+| sweep, max-concurrency 1, greedy, thinking off | 19.1 | 19.4 | 239 ms | - | - | 0 |
+| sweep, max-concurrency 32, greedy, thinking off | 101.0 | 3.6 | 1047 ms | - | - | 0 |
+| sweep, max-concurrency 192, greedy, thinking off (prompts reused) | 304.5 | 1.8 | 1935 ms | - | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/tv1-throughput/bench/summary.md
+rc=0

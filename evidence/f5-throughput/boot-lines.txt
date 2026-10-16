@@ -1,0 +1,22 @@
+(APIServer pid=55) INFO 10-15 20:43:29 [api_utils.py:357] non-default args: {'model_tag': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'host': '0.0.0.0', 'model': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'trust_remote_code': True, 'revision': '82d93699acd3be9e4617c53360fe5b3f5dbeb1b3', 'max_model_len': 1048
+(EngineCore pid=176) INFO 10-15 20:43:39 [__init__.py:254] Applied linear backend override for 'fp8_w8a8': 'cutlass'
+(EngineCore pid=176) INFO 10-15 20:43:39 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for MergedColumnParallelLinear
+(EngineCore pid=176) INFO 10-15 20:43:39 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for RowParallelLinear
+(EngineCore pid=176) INFO 10-15 20:43:39 [__init__.py:1246] Using FlashInferCutlassNvFp4LinearKernel for NVFP4 GEMM
+(EngineCore pid=176) INFO 10-15 20:43:40 [nvfp4.py:314] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASHINFER_CUTEDSL', 'FLASHINFER_CUTEDSL_BATCHED', 'FLASHINFER_CUTLASS', 'VLLM_CUTLASS', 'MARLIN', 'HUMMING', 'EMULATION'].
+(EngineCore pid=176) INFO 10-15 20:43:40 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for QKVParallelLinear
+(EngineCore pid=176) INFO 10-15 20:43:43 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for ParallelLMHead
+(EngineCore pid=176) INFO 10-15 20:44:01 [default_loader.py:501] Loading weights took 15.42 seconds
+(EngineCore pid=176) INFO 10-15 20:44:03 [model_runner.py:426] Model loading took 68.45 GiB memory and 23.909791 seconds
+(EngineCore pid=176) INFO 10-15 20:44:03 [interface.py:1105] Setting attention block size to 4224 tokens to ensure that attention page size is >= mamba page size.
+(EngineCore pid=176) INFO 10-15 20:44:03 [interface.py:1129] Padding mamba page size by 0.19% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=176) INFO 10-15 20:44:04 [encoder_runner.py:131] Encoder cache will be initialized with a budget of 1046529 tokens, and profiled with 1 image items of the maximum feature size.
+(EngineCore pid=176) INFO 10-15 20:44:24 [gpu_worker.py:657] Initial free memory 110.78 GiB, reserved 20.0 GiB memory for KV Cache as specified by kv_cache_memory_bytes config and skipped memory profiling. This does not respect the gpu_memory_utilization config. Only use kv_cache_memory_bytes config when you want manual control of KV cache memory size. If OOM'ed, check the difference of initial fr
+(EngineCore pid=176) INFO 10-15 20:44:24 [kv_cache_utils.py:1067] GPU KV cache size: 5,123,160 tokens, Maximum concurrency for 1,048,576 tokens per request: 4.89x
+(EngineCore pid=176) INFO 10-15 20:44:24 [kv_cache_utils.py:831] kv cache group sizes (1048576, 1048576, 1048576, 1048576, 1048576, 4224)
+(EngineCore pid=176) INFO 10-15 20:44:24 [flashinfer.py:966] FlashInfer resolved query dtypes: prefill=torch.bfloat16, decode=torch.bfloat16, decode_backend=xqa, kv_cache_dtype=torch.float8_e4m3fn, arch=sm121
+(EngineCore pid=176) INFO 10-15 20:44:24 [ssu_dispatch.py:346] Using FlashInfer Mamba SSU algorithm: auto
+(EngineCore pid=176) INFO 10-15 20:44:24 [ssu_dispatch.py:635] Using flashinfer Mamba SSU backend.
+(EngineCore pid=176) INFO 10-15 20:46:34 [model_runner.py:1128] Graph capturing finished in 56 secs, took 2.36 GiB
+(EngineCore pid=176) INFO 10-15 20:46:35 [core.py:395] init engine (profile, create kv cache, warmup model) took 151.54 s (compilation: 10.52 s)
+(APIServer pid=55) INFO 10-15 20:46:39 [entry.py:140] Starting vLLM server on http://0.0.0.0:8000

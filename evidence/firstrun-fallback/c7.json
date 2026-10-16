@@ -1,0 +1,19 @@
+{
+  "passed": 1,
+  "executed": 1,
+  "skipped": [],
+  "soft_warnings": [],
+  "hard_failures": [],
+  "results": [
+    {
+      "id": "C7",
+      "name": "thinking_token_budget caps reasoning (proof prompt: ~350 reasoning tokens unbounded) and an answer follows",
+      "hard": true,
+      "ok": true,
+      "skipped": false,
+      "retries": 0,
+      "secs": 5.61,
+      "detail": "reasoning_tokens=31 with budget 32"
+    }
+  ]
+}

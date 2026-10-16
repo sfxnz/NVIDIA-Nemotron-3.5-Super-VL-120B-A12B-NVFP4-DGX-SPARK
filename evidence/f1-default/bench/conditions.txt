@@ -1,0 +1,11 @@
+date: 2026-10-15T19:49:37+01:00
+container: nemotron-3.5-super-vl image: vllm/vllm-openai@sha256:cb9bc64f0f038c2c2ebf13b31248fb87aca40c356c3d20f363be087cfcff1fcd
+args: serve nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4 --revision 82d93699acd3be9e4617c53360fe5b3f5dbeb1b3 --served-model-name nemotron-3.5-super-vl --host 0.0.0.0 --port 8000 --trust-remote-code --max-model-len 1048576 --max-num-seqs 32 --max-num-batched-tokens 4608 --gpu-memory-utilization 0.75 --kv-cache-memory-bytes 19G --block-size 256 --mamba-backend flashinfer --mamba-ssm-cache-dtype float16 --enable-mamba-cache-stochastic-rounding --mamba-cache-philox-rounds 5 --kernel-config {"linear_backend_per_quant":{"fp8_w8a8":"cutlass"}} --limit-mm-per-prompt {"image":{"count":4,"width":1824,"height":1824},"video":0} --mm-processor-cache-gb 1 --load-format fastsafetensors --enable-auto-tool-choice --tool-call-parser qwen3_coder --reasoning-parser nemotron_v3 --speculative-config {"method":"dflash","model":"nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr","revision":"7c7221aeb4cb3139307aa457f7dce11a8fb6ceb2","num_speculative_tokens":7} --enable-prefix-caching --prefix-match-unit 64 --enable-mamba-shared-prefix-checkpoint
+free -h before:
+               total        used        free      shared  buff/cache   available
+Mem:           121Gi       106Gi        11Gi       371Mi       5.8Gi        15Gi
+Swap:           15Gi       4.5Gi        11Gi
+free -h after:
+               total        used        free      shared  buff/cache   available
+Mem:           121Gi       107Gi       9.0Gi       371Mi       6.2Gi        13Gi
+Swap:           15Gi       4.5Gi        11Gi

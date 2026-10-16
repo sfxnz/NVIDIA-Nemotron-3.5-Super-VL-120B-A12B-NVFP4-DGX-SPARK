@@ -1,0 +1,15 @@
+[
+ {
+  "cell": "sweep_c256",
+  "wall_s": 726.2,
+  "completed": 768,
+  "failed": 0,
+  "output_tok_s": 323.9,
+  "ttft_p50_ms": 39663,
+  "ttft_p99_ms": 73379,
+  "tpot_p50_ms": 565.04,
+  "preemptions": 0,
+  "per_user_tok_s": 1.8,
+  "label": "sweep, max-concurrency 256, greedy, thinking off (prompts reused)"
+ }
+]

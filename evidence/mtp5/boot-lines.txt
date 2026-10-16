@@ -1,0 +1,25 @@
+(APIServer pid=58) INFO 10-16 00:26:40 [api_utils.py:357] non-default args: {'model_tag': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'host': '0.0.0.0', 'model': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'trust_remote_code': True, 'revision': '82d93699acd3be9e4617c53360fe5b3f5dbeb1b3', 'max_model_len': 2621
+(APIServer pid=58) INFO 10-16 00:26:49 [speculative.py:1636] Overriding draft model max model len from 1048576 to 262144
+(EngineCore pid=223) INFO 10-16 00:26:55 [core.py:133] Initializing a V1 LLM engine (v0.32.0rc1.dev190+g3f1bcfd82) with config: model='/root/.cache/huggingface/hub/models--nvidia--NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4/snapshots/82d93699acd3be9e4617c53360fe5b3f5dbeb1b3', speculative_config=SpeculativeConfig(method='mtp', model='/root/.cache/huggingface/hub/models--nvidia--NVIDIA-Nemotron-3.5
+(EngineCore pid=223) INFO 10-16 00:26:56 [__init__.py:254] Applied linear backend override for 'fp8_w8a8': 'cutlass'
+(EngineCore pid=223) INFO 10-16 00:26:56 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for MergedColumnParallelLinear
+(EngineCore pid=223) INFO 10-16 00:26:56 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for RowParallelLinear
+(EngineCore pid=223) INFO 10-16 00:26:56 [__init__.py:1246] Using FlashInferCutlassNvFp4LinearKernel for NVFP4 GEMM
+(EngineCore pid=223) INFO 10-16 00:26:57 [nvfp4.py:314] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASHINFER_CUTEDSL', 'FLASHINFER_CUTEDSL_BATCHED', 'FLASHINFER_CUTLASS', 'VLLM_CUTLASS', 'MARLIN', 'HUMMING', 'EMULATION'].
+(EngineCore pid=223) INFO 10-16 00:26:57 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for QKVParallelLinear
+(EngineCore pid=223) INFO 10-16 00:27:00 [__init__.py:803] Selected CutlassFP8ScaledMMLinearKernel for ParallelLMHead
+(EngineCore pid=223) INFO 10-16 00:27:18 [default_loader.py:501] Loading weights took 15.59 seconds
+(EngineCore pid=223) INFO 10-16 00:27:21 [default_loader.py:501] Loading weights took 1.22 seconds
+(EngineCore pid=223) INFO 10-16 00:27:23 [model_runner.py:426] Model loading took 70.1 GiB memory and 26.809997 seconds
+(EngineCore pid=223) INFO 10-16 00:27:23 [interface.py:1105] Setting attention block size to 4416 tokens to ensure that attention page size is >= mamba page size.
+(EngineCore pid=223) INFO 10-16 00:27:24 [encoder_runner.py:131] Encoder cache will be initialized with a budget of 261121 tokens, and profiled with 1 image items of the maximum feature size.
+(EngineCore pid=223) INFO 10-16 00:27:48 [gpu_worker.py:657] Initial free memory 111.36 GiB, reserved 19.0 GiB memory for KV Cache as specified by kv_cache_memory_bytes config and skipped memory profiling. This does not respect the gpu_memory_utilization config. Only use kv_cache_memory_bytes config when you want manual control of KV cache memory size. If OOM'ed, check the difference of initial fr
+(EngineCore pid=223) WARNING 10-16 00:27:48 [kv_cache_planning.py:494] Add 5 padding layers, may waste at most 12.50% KV cache memory
+(EngineCore pid=223) INFO 10-16 00:27:48 [kv_cache_utils.py:1067] GPU KV cache size: 2,626,682 tokens, Maximum concurrency for 262,144 tokens per request: 10.02x
+(EngineCore pid=223) INFO 10-16 00:27:48 [kv_cache_utils.py:831] kv cache group sizes (4416, 4416, 4416, 4416, 4416, 4416)
+(EngineCore pid=223) INFO 10-16 00:27:48 [flashinfer.py:966] FlashInfer resolved query dtypes: prefill=torch.bfloat16, decode=torch.bfloat16, decode_backend=xqa, kv_cache_dtype=torch.float8_e4m3fn, arch=sm121
+(EngineCore pid=223) INFO 10-16 00:27:48 [ssu_dispatch.py:346] Using FlashInfer Mamba SSU algorithm: auto
+(EngineCore pid=223) INFO 10-16 00:27:48 [ssu_dispatch.py:635] Using flashinfer Mamba SSU backend.
+(EngineCore pid=223) INFO 10-16 00:29:44 [model_runner.py:1128] Graph capturing finished in 26 secs, took 0.54 GiB
+(EngineCore pid=223) INFO 10-16 00:29:44 [core.py:395] init engine (profile, create kv cache, warmup model) took 141.46 s (compilation: 14.01 s)
+(APIServer pid=58) INFO 10-16 00:29:49 [entry.py:140] Starting vLLM server on http://0.0.0.0:8000

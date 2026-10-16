@@ -1,0 +1,39 @@
+[PASS] H1   GET /health -> 200 (0.01s) 
+[PASS] H2   GET /v1/models lists served name (+max_model_len) (0.0s) max_model_len=262144
+[PASS] H3   GET /version and /metrics (0.0s) version=0.32.0rc1.dev190+g3f1bcfd82
+[PASS] R1   /tokenize: template suffix <think>\n (on) vs <think></think> (off), medium_effort marker (0.02s) 
+[PASS] C1   thinking off: exact 'pong', no reasoning, no markup (0.39s) 
+[PASS] C2   reasoning_effort='none' maps to enable_thinking=false (0.38s) 
+[PASS] C3   thinking on (template default): reasoning populated, content correct (2.55s) reasoning_tokens=139
+[PASS] C4   medium_effort: still correct + reasoning present (token count logged) (0.84s) reasoning_tokens medium=30 high=139
+[PASS] C5   force_nonempty_content: truncated thinking is promoted to content (nemotron_v3) (3.16s) 
+[PASS] C6   include_reasoning=false hides reasoning, keeps content (2.1s) 
+[PASS] C7   thinking_token_budget caps reasoning and still yields an answer (2.12s) reasoning_tokens=114
+[PASS] T1   tool_choice=auto: finish tool_calls, valid JSON args, reasoning present (4.08s) args={'city': 'Paris'}
+[PASS] T1b  tool_choice=auto with thinking off (1.12s) args={'city': 'Tokyo', 'days': 3, 'unit': 'celsius'}
+[PASS] T1c  cookbook pattern: tools + thinking on + force_nonempty_content still yields parsed tool_calls (4.05s) 
+[PASS] T2   tool_choice=required forces a call even for chit-chat (2.73s) 
+[PASS] T3   named tool_choice: correct function, finish_reason 'stop' (OpenAI semantics) (3.14s) 
+[PASS] T4   tool result turn: answer uses tool output, no further call (1.25s) 
+[PASS] T5   parallel tool calls (2 cities) and parallel_tool_calls=false -> exactly 1 (2.92s) 
+[PASS] T6   streaming tool call: name in first tool delta, args concat -> valid JSON (1.75s) 
+[PASS] S1   SSE well-formed; reasoning deltas then content deltas; usage chunk (1.57s) ttft=0.31s
+[PASS] S2   SSE thinking off: content only, no reasoning deltas (0.39s) 
+[PASS] J1   response_format json_schema, thinking off (grammar from token 0) (0.88s) 
+[PASS] J2   response_format json_schema, thinking on (grammar applies after </think>) (4.78s) 
+[PASS] J3   response_format json_object + structured_outputs.choice (0.89s) 
+[PASS] V1   image via base64 data URL (1.82s) prompt_tokens=810
+[PASS] V2   image via http URL (local http.server; needs container --network host) (1.53s) prompt_tokens=810
+[PASS] V3   two images in one prompt, order preserved (1.31s) 
+[PASS] V4   exceeding --limit-mm-per-prompt image count -> HTTP 400 (0.02s) 
+[SKIP] V5   video_url data URL (8s: red then blue) -- only if --video (0.0s) skipped (--video not given)
+[PASS] L1   long-context needle retrieval (3 needles at 10/50/90% depth) (48.12s) prompt_tokens=102445 ttft=47.0s prefill~2178 tok/s
+[PASS] P1   N parallel requests (N=--concurrency): all 200, own code echoed, exact sums, no crosstalk (3.65s) 32/32 ok
+[PASS] P2   2N mixed (plain/stream/think/image) oversubscribed: all correct, server healthy after (23.94s) 64/64 ok; preemptions delta=0.0
+[PASS] PC1  multi-turn chat over a ~20K-token document: prefix-cache hit tokens and latency per turn (logged) (12.82s) turn0: prompt=21043 hit=0 e2e=8.4s; turn1: prompt=21068 hit=13824 e2e=3.4s; turn2: prompt=21096 hit=19584 e2e=1.0s
+[WARN] D1   temperature 0 x5 sequential: logged only. Not bit-exact by design: --enable-mamba-cache-stochastic-rounding (9.84s) outputs diverge early (common prefix 4 chars)
+[PASS] E1   bad model -> 404; tool_choice without tools -> 400; server stays healthy (0.0s) 
+[PASS] M1   speculative decoding active: mean acceptance length from /metrics (0.01s) mean_acceptance_length=5.73
+
+34/35 executed checks passed; skipped: ['V5']; soft warnings: ['D1']; hard failures: []
+rc=0

@@ -1,0 +1,5 @@
+MemAvailable:    9164444 kB
+Cached:          4304968 kB
+AnonPages:       8468088 kB
+Slab:            3157040 kB
+SUnreclaim:      1314712 kB

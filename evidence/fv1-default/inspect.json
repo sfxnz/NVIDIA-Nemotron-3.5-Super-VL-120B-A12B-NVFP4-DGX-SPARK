@@ -1,0 +1,353 @@
+[
+ {
+  "Id": "0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d",
+  "Created": "2026-10-15T21:41:17.832104623Z",
+  "Path": "vllm",
+  "Args": [
+   "serve",
+   "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+   "--revision",
+   "82d93699acd3be9e4617c53360fe5b3f5dbeb1b3",
+   "--served-model-name",
+   "nemotron-3.5-super-vl",
+   "--host",
+   "0.0.0.0",
+   "--port",
+   "8000",
+   "--trust-remote-code",
+   "--max-model-len",
+   "262144",
+   "--max-num-seqs",
+   "32",
+   "--max-num-batched-tokens",
+   "4608",
+   "--gpu-memory-utilization",
+   "0.75",
+   "--kv-cache-memory-bytes",
+   "19G",
+   "--block-size",
+   "256",
+   "--mamba-backend",
+   "flashinfer",
+   "--mamba-ssm-cache-dtype",
+   "float16",
+   "--enable-mamba-cache-stochastic-rounding",
+   "--mamba-cache-philox-rounds",
+   "5",
+   "--kernel-config",
+   "{\"linear_backend_per_quant\":{\"fp8_w8a8\":\"cutlass\"}}",
+   "--limit-mm-per-prompt",
+   "{\"image\":{\"count\":4,\"width\":1824,\"height\":1824},\"video\":0}",
+   "--mm-processor-cache-gb",
+   "1",
+   "--load-format",
+   "fastsafetensors",
+   "--shutdown-timeout",
+   "45",
+   "--enable-auto-tool-choice",
+   "--tool-call-parser",
+   "qwen3_coder",
+   "--reasoning-parser",
+   "nemotron_v3",
+   "--speculative-config",
+   "{\"method\":\"dflash\",\"model\":\"nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr\",\"revision\":\"7c7221aeb4cb3139307aa457f7dce11a8fb6ceb2\",\"num_speculative_tokens\":7}",
+   "--enable-prefix-caching"
+  ],
+  "State": {
+   "Status": "running",
+   "Running": true,
+   "Paused": false,
+   "Restarting": false,
+   "OOMKilled": false,
+   "Dead": false,
+   "Pid": 3192721,
+   "ExitCode": 0,
+   "Error": "",
+   "StartedAt": "2026-10-15T21:41:17.907102154Z",
+   "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Image": "sha256:9dfef102a162fbe71821683e252a1f30454d183fb5ef7c8f9c45886f7e594f04",
+  "ResolvConfPath": "/var/lib/docker/containers/0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d/resolv.conf",
+  "HostnamePath": "/var/lib/docker/containers/0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d/hostname",
+  "HostsPath": "/var/lib/docker/containers/0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d/hosts",
+  "LogPath": "/var/lib/docker/containers/0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d/0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d-json.log",
+  "Name": "/nemotron-3.5-super-vl",
+  "RestartCount": 0,
+  "Driver": "overlay2",
+  "Platform": "linux",
+  "MountLabel": "",
+  "ProcessLabel": "",
+  "AppArmorProfile": "docker-default",
+  "ExecIDs": null,
+  "HostConfig": {
+   "Binds": [
+    "/home/sfxnz/.cache/huggingface:/root/.cache/huggingface:ro",
+    "/home/sfxnz/projects/ai-lab/recipes/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/.cache:/jit-cache"
+   ],
+   "ContainerIDFile": "",
+   "LogConfig": {
+    "Type": "json-file",
+    "Config": {
+     "max-file": "3",
+     "max-size": "100m"
+    }
+   },
+   "NetworkMode": "bridge",
+   "PortBindings": {
+    "8000/tcp": [
+     {
+      "HostIp": "127.0.0.1",
+      "HostPort": "8000"
+     }
+    ]
+   },
+   "RestartPolicy": {
+    "Name": "no",
+    "MaximumRetryCount": 0
+   },
+   "AutoRemove": false,
+   "VolumeDriver": "",
+   "VolumesFrom": null,
+   "ConsoleSize": [
+    0,
+    0
+   ],
+   "CapAdd": null,
+   "CapDrop": null,
+   "CgroupnsMode": "private",
+   "Dns": null,
+   "DnsOptions": [],
+   "DnsSearch": [],
+   "ExtraHosts": null,
+   "GroupAdd": null,
+   "IpcMode": "host",
+   "Cgroup": "",
+   "Links": null,
+   "OomScoreAdj": 1000,
+   "PidMode": "",
+   "Privileged": false,
+   "PublishAllPorts": false,
+   "ReadonlyRootfs": false,
+   "SecurityOpt": [
+    "label=disable"
+   ],
+   "UTSMode": "",
+   "UsernsMode": "",
+   "ShmSize": 67108864,
+   "Runtime": "runc",
+   "Isolation": "",
+   "CpuShares": 0,
+   "Memory": 0,
+   "NanoCpus": 0,
+   "CgroupParent": "",
+   "BlkioWeight": 0,
+   "BlkioWeightDevice": [],
+   "BlkioDeviceReadBps": [],
+   "BlkioDeviceWriteBps": [],
+   "BlkioDeviceReadIOps": [],
+   "BlkioDeviceWriteIOps": [],
+   "CpuPeriod": 0,
+   "CpuQuota": 0,
+   "CpuRealtimePeriod": 0,
+   "CpuRealtimeRuntime": 0,
+   "CpusetCpus": "",
+   "CpusetMems": "",
+   "Devices": [],
+   "DeviceCgroupRules": null,
+   "DeviceRequests": [
+    {
+     "Driver": "",
+     "Count": -1,
+     "DeviceIDs": null,
+     "Capabilities": [
+      [
+       "gpu"
+      ]
+     ],
+     "Options": {}
+    }
+   ],
+   "MemoryReservation": 0,
+   "MemorySwap": 0,
+   "MemorySwappiness": null,
+   "OomKillDisable": null,
+   "PidsLimit": null,
+   "Ulimits": [
+    {
+     "Name": "core",
+     "Hard": 1,
+     "Soft": 1
+    }
+   ],
+   "CpuCount": 0,
+   "CpuPercent": 0,
+   "IOMaximumIOps": 0,
+   "IOMaximumBandwidth": 0,
+   "MaskedPaths": [
+    "/proc/acpi",
+    "/proc/asound",
+    "/proc/interrupts",
+    "/proc/kcore",
+    "/proc/keys",
+    "/proc/latency_stats",
+    "/proc/sched_debug",
+    "/proc/scsi",
+    "/proc/timer_list",
+    "/proc/timer_stats",
+    "/sys/devices/virtual/powercap",
+    "/sys/firmware"
+   ],
+   "ReadonlyPaths": [
+    "/proc/bus",
+    "/proc/fs",
+    "/proc/irq",
+    "/proc/sys",
+    "/proc/sysrq-trigger"
+   ],
+   "Init": true
+  },
+  "GraphDriver": {
+   "Data": {
+    "ID": "0eacab1ad2d2e9e13d67077bb9a0ae3eb5ced1c77c021d0cd5d8a9af1a2aa03d",
+    "LowerDir": "/var/lib/docker/overlay2/ce80b2aff0fbe41944f10ea8fce3b85a003d1021462a53f3ebf3cebacd7de45a-init/diff:/var/lib/docker/overlay2/1decd5d49b3a892ddd54a558880f7d40e479b9509c7282b65eb3aafc732c9b84/diff:/var/lib/docker/overlay2/830eb875749f80811f58ec8362ac19c979c946cf7125615efdcbf163c034c4e1/diff:/var/lib/docker/overlay2/e1252af1d06a013247b9fb58eac6fc5a79854f35c84fe38cf6f7d9bb6932c7bd/diff:/var/lib/docker/overlay2/a099e227813d8b198f428b8544b206382173e1b9871691f2053803f6f7e9083e/diff:/var/lib/docker/overlay2/5d41bc5493dde77596609739f862755aa674b911d977c651bc767e408696b211/diff:/var/lib/docker/overlay2/bad4eca70d4828db38ca003704ad7e0d6d96e6a03921a4cb6a99f7a68574e59c/diff:/var/lib/docker/overlay2/55b7dbefb230e47e4b7fbfa3312ed1de10072aa05342142484204f9ab1b4e779/diff:/var/lib/docker/overlay2/f43a184fea6d5db16505ee36316a1fa205bf4009ab512cffb9c1f8d41a4459bd/diff:/var/lib/docker/overlay2/a6d636b3924b10ee7fea2246e36deacc71553c404671b5e3c482646bd9825e27/diff:/var/lib/docker/overlay2/7239d407c84c2dc0f776f2a467bd225f823881581fd2e15647e1dc3ba0ba07c2/diff:/var/lib/docker/overlay2/83b92cf740cae4fc9624589f41e8ede6f3d536faed998f147eb64f9809c31013/diff:/var/lib/docker/overlay2/b3baf04bf0f3595ae71d7a425693aa353972c934784db534f3c192886f1e6c8d/diff:/var/lib/docker/overlay2/9e18366b43a290d96ccbf55a2a689b36b3547b39a3f13ff4bef64152a1ae7f5a/diff:/var/lib/docker/overlay2/68bd943dd3d591392c98f7ca31d30515f8ad8fd487b3510a11bf99f2bd628d42/diff:/var/lib/docker/overlay2/76262f9b3d09ca3fd48cf83ee0ce9c3a1ee19201cfcd1afc7e1f66d73f86bf3d/diff:/var/lib/docker/overlay2/aeb3b0dd839acd9d94981c07275b60ca0550bd706ae8a24cbae3d35451c712e7/diff:/var/lib/docker/overlay2/6e67eb960deca98bb4e3e2b5400a74b206aaebe173124bc179d6e3adb677f543/diff:/var/lib/docker/overlay2/3944ea50df05854e88be46e874f72b65597089b396132b1f46d5e1dde472ac88/diff:/var/lib/docker/overlay2/ad56eed760e6ca66bba7db3eec48e0e606f41380e65ed8b92bb051d3de821f18/diff:/var/lib/docker/overlay2/6ee087f118085398379f781e0d9ffb3218e4c3c0b60a12b2bfa7bf0d7f0f0b00/diff:/var/lib/docker/overlay2/b3ae1afa9a32d8778904a2701cce788f2098e1b06d1fdfe9648d3021169aaa52/diff:/var/lib/docker/overlay2/3b2ada39a06922b34bb7a761b60f65016484ca7b3b0ff672e5dd145d09dd40db/diff:/var/lib/docker/overlay2/81a03950b2524a9a71dd787d72b5d0846b8eae1b14325422ed2139bbbb518e36/diff:/var/lib/docker/overlay2/5319b956fdc4f568a07b055885ebc2820610d9762fac3228429921e16ff1ef69/diff:/var/lib/docker/overlay2/4536433b8ff598062f6e9c0ec006990d150918e873235e4b2bdcbf0a10a409c3/diff:/var/lib/docker/overlay2/394f80fbc435927cee397f1b059b26f268858d63fa092d933d21bf43e5237cf7/diff:/var/lib/docker/overlay2/dd8a3774e281484b54c7789f5c27ae0d020dd99ffaf0dcb47d84cd78d282d7d4/diff:/var/lib/docker/overlay2/ef43a4f106a00f7a055860bd12905cfaa1d45c90f5e3c1fb798bb404041537dd/diff:/var/lib/docker/overlay2/1f8bccf8b57c262d6f8f7fb999940acccd757e8eaa56de6dab94852711f5ee73/diff:/var/lib/docker/overlay2/79751a46f636f86e38f13c0b10d4ac7eb5e27064c7578c9e9584c1debc00f222/diff:/var/lib/docker/overlay2/c140d2efe8085e351386e99f45b0541f7d77a3f5db5954ff14be66743c5fb8ed/diff:/var/lib/docker/overlay2/b729b84664542dd6adc43263970ca935755752af6a7ed983816e67f6e65be8df/diff:/var/lib/docker/overlay2/366ddfd58cabe0fb305e06add342007fc6f0a4135572830f7a32008c5124ad7f/diff:/var/lib/docker/overlay2/bcf51cbf2bd283f1f9673d1b82ce8d89a373c5ce340e98747cf3e916365676fd/diff:/var/lib/docker/overlay2/9a6454bcc9ddd165b79e4db465b739f74e857b6f1a3cc21bbdd0d5ed30072383/diff:/var/lib/docker/overlay2/e8585d5d9c4fa5e2f7318bff6ac37c1dff4748ebdf202b39b36d7c82d05624d1/diff:/var/lib/docker/overlay2/340e65dd295bc87ace7a743704fe14f56333412780ee093af9fe64f70731b5c0/diff:/var/lib/docker/overlay2/bac18dfa0989fe82505c8c7f846f71b2710b93d67600c9e8df0448634a8a44e5/diff:/var/lib/docker/overlay2/edb74c67d401edcd80c74aa3c5c7af0a35db6fdae777b0f4be7099691abd332f/diff:/var/lib/docker/overlay2/d9598057c32905c6cc279e7104f62740a67a580d7ce3b5aff7a61287df971d37/diff",
+    "MergedDir": "/var/lib/docker/overlay2/ce80b2aff0fbe41944f10ea8fce3b85a003d1021462a53f3ebf3cebacd7de45a/merged",
+    "UpperDir": "/var/lib/docker/overlay2/ce80b2aff0fbe41944f10ea8fce3b85a003d1021462a53f3ebf3cebacd7de45a/diff",
+    "WorkDir": "/var/lib/docker/overlay2/ce80b2aff0fbe41944f10ea8fce3b85a003d1021462a53f3ebf3cebacd7de45a/work"
+   },
+   "Name": "overlay2"
+  },
+  "Mounts": [
+   {
+    "Type": "bind",
+    "Source": "/home/sfxnz/.cache/huggingface",
+    "Destination": "/root/.cache/huggingface",
+    "Mode": "ro",
+    "RW": false,
+    "Propagation": "rprivate"
+   },
+   {
+    "Type": "bind",
+    "Source": "/home/sfxnz/projects/ai-lab/recipes/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/.cache",
+    "Destination": "/jit-cache",
+    "Mode": "",
+    "RW": true,
+    "Propagation": "rprivate"
+   }
+  ],
+  "Config": {
+   "Hostname": "0eacab1ad2d2",
+   "Domainname": "",
+   "User": "",
+   "AttachStdin": false,
+   "AttachStdout": false,
+   "AttachStderr": false,
+   "ExposedPorts": {
+    "8000/tcp": {}
+   },
+   "Tty": false,
+   "OpenStdin": false,
+   "StdinOnce": false,
+   "Cmd": [
+    "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
+    "--revision",
+    "82d93699acd3be9e4617c53360fe5b3f5dbeb1b3",
+    "--served-model-name",
+    "nemotron-3.5-super-vl",
+    "--host",
+    "0.0.0.0",
+    "--port",
+    "8000",
+    "--trust-remote-code",
+    "--max-model-len",
+    "262144",
+    "--max-num-seqs",
+    "32",
+    "--max-num-batched-tokens",
+    "4608",
+    "--gpu-memory-utilization",
+    "0.75",
+    "--kv-cache-memory-bytes",
+    "19G",
+    "--block-size",
+    "256",
+    "--mamba-backend",
+    "flashinfer",
+    "--mamba-ssm-cache-dtype",
+    "float16",
+    "--enable-mamba-cache-stochastic-rounding",
+    "--mamba-cache-philox-rounds",
+    "5",
+    "--kernel-config",
+    "{\"linear_backend_per_quant\":{\"fp8_w8a8\":\"cutlass\"}}",
+    "--limit-mm-per-prompt",
+    "{\"image\":{\"count\":4,\"width\":1824,\"height\":1824},\"video\":0}",
+    "--mm-processor-cache-gb",
+    "1",
+    "--load-format",
+    "fastsafetensors",
+    "--shutdown-timeout",
+    "45",
+    "--enable-auto-tool-choice",
+    "--tool-call-parser",
+    "qwen3_coder",
+    "--reasoning-parser",
+    "nemotron_v3",
+    "--speculative-config",
+    "{\"method\":\"dflash\",\"model\":\"nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr\",\"revision\":\"7c7221aeb4cb3139307aa457f7dce11a8fb6ceb2\",\"num_speculative_tokens\":7}",
+    "--enable-prefix-caching"
+   ],
+   "Image": "vllm/vllm-openai@sha256:cb9bc64f0f038c2c2ebf13b31248fb87aca40c356c3d20f363be087cfcff1fcd",
+   "Volumes": null,
+   "WorkingDir": "/vllm-workspace",
+   "Entrypoint": [
+    "vllm",
+    "serve"
+   ],
+   "Labels": {
+    "ai-lab.profile": "default",
+    "ai-lab.recipe": "nemotron-3.5-super-vl-spark",
+    "ai.vllm.build.commit": "3f1bcfd82bb2e93fcd364fc7a5491718453a77e2",
+    "ai.vllm.build.pipeline": "019d130e-464e-4ff7-b84b-492992c0c06b",
+    "ai.vllm.build.url": "https://buildkite.com/vllm/release-v2/builds/8443",
+    "ai.vllm.image.tag": "vllm/vllm-openai:nightly-3f1bcfd82bb2e93fcd364fc7a5491718453a77e2",
+    "maintainer": "NVIDIA CORPORATION <cudatools@nvidia.com>",
+    "org.opencontainers.image.ref.name": "ubuntu",
+    "org.opencontainers.image.revision": "3f1bcfd82bb2e93fcd364fc7a5491718453a77e2",
+    "org.opencontainers.image.source": "https://github.com/vllm-project/vllm",
+    "org.opencontainers.image.url": "https://buildkite.com/vllm/release-v2/builds/8443",
+    "org.opencontainers.image.version": "vllm/vllm-openai:nightly-3f1bcfd82bb2e93fcd364fc7a5491718453a77e2"
+   }
+  },
+  "NetworkSettings": {
+   "SandboxID": "a75dd0ba12d6c760cc3e0e67a723f6c9b2cbeb36713484034135b9399353436b",
+   "SandboxKey": "/var/run/docker/netns/a75dd0ba12d6",
+   "Ports": {
+    "8000/tcp": [
+     {
+      "HostIp": "127.0.0.1",
+      "HostPort": "8000"
+     }
+    ]
+   },
+   "Networks": {
+    "bridge": {
+     "IPAMConfig": null,
+     "Links": null,
+     "Aliases": null,
+     "DriverOpts": null,
+     "GwPriority": 0,
+     "NetworkID": "752d39e28851172f2acd13e5c55242533bb66af548397a13bdca15ac8ce22ecd",
+     "EndpointID": "8bac3df6fc60967142168e57c70079ee424bf7e46814a3be5dfa94e5404bff39",
+     "Gateway": "172.17.0.1",
+     "IPAddress": "172.17.0.2",
+     "MacAddress": "5e:60:9d:c2:13:aa",
+     "IPPrefixLen": 16,
+     "IPv6Gateway": "",
+     "GlobalIPv6Address": "",
+     "GlobalIPv6PrefixLen": 0,
+     "DNSNames": null
+    }
+   }
+  }
+ }
+]

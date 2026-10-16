@@ -1,0 +1,41 @@
+{
+ "clients": 24,
+ "minutes": 30.0,
+ "by_kind": {
+  "short": {
+   "ok": 338,
+   "fail": 0,
+   "secs": 10920.411418914795,
+   "tokens": 1563
+  },
+  "tool": {
+   "ok": 176,
+   "fail": 0,
+   "secs": 6506.3946051597595,
+   "tokens": 4512
+  },
+  "image": {
+   "ok": 88,
+   "fail": 0,
+   "secs": 4692.152535915375,
+   "tokens": 3050
+  },
+  "reason": {
+   "ok": 179,
+   "fail": 0,
+   "secs": 16214.93551492691,
+   "tokens": 41268
+  },
+  "long": {
+   "ok": 85,
+   "fail": 0,
+   "secs": 6280.957095384598,
+   "tokens": 672
+  }
+ },
+ "failures": [],
+ "failed": 0,
+ "min_avail_mib": 7431,
+ "unhealthy_samples": 0,
+ "stall": false
+}

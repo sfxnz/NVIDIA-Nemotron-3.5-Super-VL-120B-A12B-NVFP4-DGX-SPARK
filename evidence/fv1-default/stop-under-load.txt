@@ -1,0 +1,7 @@
+stop.sh rc 0 took 48.2 s
+Stopping nemotron-3.5-super-vl (running requests get up to 45 s to finish)
+Stopped nemotron-3.5-super-vl. Memory now: 113.7 GiB available 
+client 0 completed finish=length tokens=300 after 18.8s
+client 1 completed finish=length tokens=300 after 21.9s
+client 2 error HTTPError: HTTP Error 500: Internal Server Error after 55.2s
+client 3 completed finish=stop tokens=1014 after 52.9s

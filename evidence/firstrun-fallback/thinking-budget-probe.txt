@@ -1,0 +1,4 @@
+prompt: Prove that the square root of 2 is irrational, then give the final verdict in one word.
+thinking_token_budget=None: reasoning_tokens=626 completion_tokens=917 finish=stop content_starts='**Proof that √2 is irrational**\n\nAssume, for the sake of con'
+thinking_token_budget=64: reasoning_tokens=63 completion_tokens=373 finish=stop content_starts='**Proof by contradiction:**\n\nAssume, for the sake of contrad'
+thinking_token_budget=16: reasoning_tokens=15 completion_tokens=261 finish=stop content_starts='**Proof that √2 is irrational**\n\nAssume, for the sake of con'

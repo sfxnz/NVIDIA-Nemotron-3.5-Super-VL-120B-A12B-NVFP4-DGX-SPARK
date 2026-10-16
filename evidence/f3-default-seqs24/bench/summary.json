@@ -1,0 +1,44 @@
+[
+ {
+  "cell": "decode_c1_greedy",
+  "wall_s": 133.9,
+  "completed": 16,
+  "failed": 0,
+  "output_tok_s": 40.6,
+  "ttft_p50_ms": 367,
+  "ttft_p99_ms": 627,
+  "tpot_p50_ms": 23.18,
+  "preemptions": 0,
+  "per_user_tok_s": 43.1,
+  "accept_len": 4.41,
+  "label": "decode, max-concurrency 1, greedy, thinking off"
+ },
+ {
+  "cell": "decode_c1_card_sampling",
+  "wall_s": 119.7,
+  "completed": 8,
+  "failed": 0,
+  "output_tok_s": 41.0,
+  "ttft_p50_ms": 370,
+  "ttft_p99_ms": 624,
+  "tpot_p50_ms": 21.56,
+  "preemptions": 0,
+  "per_user_tok_s": 46.4,
+  "accept_len": 4.36,
+  "label": "decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on"
+ },
+ {
+  "cell": "sweep_c24",
+  "wall_s": 118.8,
+  "completed": 72,
+  "failed": 0,
+  "output_tok_s": 186.5,
+  "ttft_p50_ms": 1552,
+  "ttft_p99_ms": 2825,
+  "tpot_p50_ms": 94.35,
+  "preemptions": 0,
+  "per_user_tok_s": 10.6,
+  "accept_len": 4.47,
+  "label": "sweep, max-concurrency 24, greedy, thinking off"
+ }
+]

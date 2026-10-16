@@ -1,0 +1,25 @@
+{
+  "passed": 2,
+  "total": 2,
+  "hard_failures": [],
+  "results": [
+    {
+      "id": "H2",
+      "name": "GET /v1/models lists served name (+max_model_len)",
+      "hard": true,
+      "ok": true,
+      "retries": 0,
+      "secs": 0.02,
+      "detail": "max_model_len=1048576"
+    },
+    {
+      "id": "L1",
+      "name": "long-context needle retrieval (3 needles at 10/50/90% depth)",
+      "hard": true,
+      "ok": true,
+      "retries": 0,
+      "secs": 1178.81,
+      "detail": "prompt_tokens=966500 ttft=1178.1s prefill~820 tok/s"
+    }
+  ]
+}

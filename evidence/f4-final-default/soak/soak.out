@@ -1,0 +1,102 @@
+21:04:24 requests=22 failed=0 min_avail=10463MiB stall=False
+21:04:54 requests=37 failed=0 min_avail=10446MiB stall=False
+21:05:24 requests=48 failed=0 min_avail=9703MiB stall=False
+21:05:54 requests=72 failed=0 min_avail=9694MiB stall=False
+21:06:24 requests=88 failed=0 min_avail=9694MiB stall=False
+21:06:54 requests=112 failed=0 min_avail=9694MiB stall=False
+21:07:24 requests=126 failed=0 min_avail=9328MiB stall=False
+21:07:54 requests=135 failed=0 min_avail=9328MiB stall=False
+21:08:24 requests=144 failed=0 min_avail=9328MiB stall=False
+21:08:54 requests=160 failed=0 min_avail=9328MiB stall=False
+21:09:24 requests=180 failed=0 min_avail=9328MiB stall=False
+21:09:54 requests=205 failed=0 min_avail=9328MiB stall=False
+21:10:24 requests=217 failed=0 min_avail=9328MiB stall=False
+21:10:54 requests=219 failed=0 min_avail=9328MiB stall=False
+21:11:24 requests=229 failed=0 min_avail=9328MiB stall=False
+21:11:54 requests=256 failed=0 min_avail=9328MiB stall=False
+21:12:24 requests=271 failed=0 min_avail=9328MiB stall=False
+21:12:54 requests=283 failed=0 min_avail=9328MiB stall=False
+21:13:24 requests=297 failed=0 min_avail=9088MiB stall=False
+21:13:54 requests=317 failed=0 min_avail=8763MiB stall=False
+21:14:24 requests=323 failed=0 min_avail=8755MiB stall=False
+21:14:54 requests=339 failed=0 min_avail=8745MiB stall=False
+21:15:24 requests=357 failed=0 min_avail=8728MiB stall=False
+21:15:54 requests=377 failed=0 min_avail=8720MiB stall=False
+21:16:24 requests=392 failed=0 min_avail=8699MiB stall=False
+21:16:54 requests=403 failed=0 min_avail=8697MiB stall=False
+21:17:24 requests=416 failed=0 min_avail=8697MiB stall=False
+21:17:54 requests=424 failed=0 min_avail=8697MiB stall=False
+21:18:24 requests=446 failed=0 min_avail=8187MiB stall=False
+21:18:54 requests=457 failed=0 min_avail=8187MiB stall=False
+21:19:24 requests=473 failed=0 min_avail=8187MiB stall=False
+21:19:54 requests=479 failed=0 min_avail=8187MiB stall=False
+21:20:24 requests=488 failed=0 min_avail=8187MiB stall=False
+21:20:54 requests=499 failed=0 min_avail=8187MiB stall=False
+21:21:24 requests=521 failed=0 min_avail=8187MiB stall=False
+21:21:54 requests=537 failed=0 min_avail=8187MiB stall=False
+21:22:24 requests=553 failed=0 min_avail=8187MiB stall=False
+21:22:54 requests=560 failed=0 min_avail=8187MiB stall=False
+21:23:24 requests=570 failed=0 min_avail=8187MiB stall=False
+21:23:54 requests=584 failed=0 min_avail=8187MiB stall=False
+21:24:24 requests=591 failed=0 min_avail=8187MiB stall=False
+21:24:54 requests=610 failed=0 min_avail=8187MiB stall=False
+21:25:24 requests=631 failed=0 min_avail=8187MiB stall=False
+21:25:54 requests=638 failed=0 min_avail=8187MiB stall=False
+21:26:24 requests=643 failed=0 min_avail=8187MiB stall=False
+21:26:54 requests=655 failed=0 min_avail=8187MiB stall=False
+21:27:24 requests=686 failed=0 min_avail=8187MiB stall=False
+21:27:54 requests=706 failed=0 min_avail=8187MiB stall=False
+21:28:24 requests=718 failed=0 min_avail=8187MiB stall=False
+21:28:54 requests=728 failed=0 min_avail=8187MiB stall=False
+21:29:24 requests=742 failed=0 min_avail=8187MiB stall=False
+21:29:54 requests=757 failed=0 min_avail=8187MiB stall=False
+21:30:24 requests=768 failed=0 min_avail=8148MiB stall=False
+21:30:54 requests=775 failed=0 min_avail=8113MiB stall=False
+21:31:24 requests=781 failed=0 min_avail=8101MiB stall=False
+21:31:54 requests=785 failed=0 min_avail=8067MiB stall=False
+21:32:24 requests=810 failed=0 min_avail=8067MiB stall=False
+21:32:54 requests=814 failed=0 min_avail=7431MiB stall=False
+21:33:24 requests=830 failed=0 min_avail=7431MiB stall=False
+21:33:54 requests=842 failed=0 min_avail=7431MiB stall=False
+{
+ "clients": 24,
+ "minutes": 30.0,
+ "by_kind": {
+  "short": {
+   "ok": 338,
+   "fail": 0,
+   "secs": 10920.411418914795,
+   "tokens": 1563
+  },
+  "tool": {
+   "ok": 176,
+   "fail": 0,
+   "secs": 6506.3946051597595,
+   "tokens": 4512
+  },
+  "image": {
+   "ok": 88,
+   "fail": 0,
+   "secs": 4692.152535915375,
+   "tokens": 3050
+  },
+  "reason": {
+   "ok": 179,
+   "fail": 0,
+   "secs": 16214.93551492691,
+   "tokens": 41268
+  },
+  "long": {
+   "ok": 85,
+   "fail": 0,
+   "secs": 6280.957095384598,
+   "tokens": 672
+  }
+ },
+ "failures": [],
+ "failed": 0,
+ "min_avail_mib": 7431,
+ "unhealthy_samples": 0,
+ "stall": false
+}
+rc=0

@@ -1,0 +1,69 @@
+[
+ {
+  "cell": "decode_c1_greedy",
+  "wall_s": 243.1,
+  "completed": 32,
+  "failed": 0,
+  "output_tok_s": 40.9,
+  "ttft_p50_ms": 434,
+  "ttft_p99_ms": 802,
+  "tpot_p50_ms": 22.58,
+  "preemptions": 0,
+  "per_user_tok_s": 44.3,
+  "accept_len": 4.66,
+  "label": "decode, max-concurrency 1, greedy, thinking off"
+ },
+ {
+  "cell": "decode_c1_card_sampling",
+  "wall_s": 232.5,
+  "completed": 16,
+  "failed": 0,
+  "output_tok_s": 36.6,
+  "ttft_p50_ms": 342,
+  "ttft_p99_ms": 949,
+  "tpot_p50_ms": 27.35,
+  "preemptions": 0,
+  "per_user_tok_s": 36.6,
+  "accept_len": 4.08,
+  "label": "decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on"
+ },
+ {
+  "cell": "prefill_8k",
+  "wall_s": 16.5,
+  "completed": 3,
+  "failed": 0,
+  "output_tok_s": 0.3,
+  "ttft_p50_ms": 2802,
+  "ttft_p99_ms": 3264,
+  "tpot_p50_ms": 0.0,
+  "preemptions": 0,
+  "label": "prefill, 8192 random tokens, max-concurrency 1",
+  "prefill_tok_s": 2924
+ },
+ {
+  "cell": "prefill_32k",
+  "wall_s": 29.8,
+  "completed": 2,
+  "failed": 0,
+  "output_tok_s": 0.1,
+  "ttft_p50_ms": 11279,
+  "ttft_p99_ms": 11280,
+  "tpot_p50_ms": 0.0,
+  "preemptions": 0,
+  "label": "prefill, 32768 random tokens, max-concurrency 1",
+  "prefill_tok_s": 2905
+ },
+ {
+  "cell": "prefill_128k",
+  "wall_s": 63.4,
+  "completed": 1,
+  "failed": 0,
+  "output_tok_s": 0.0,
+  "ttft_p50_ms": 55816,
+  "ttft_p99_ms": 55816,
+  "tpot_p50_ms": 0.0,
+  "preemptions": 0,
+  "label": "prefill, 131072 random tokens, max-concurrency 1",
+  "prefill_tok_s": 2348
+ }
+]

@@ -1,0 +1,10 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 256, sets sweep, levels 256
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f5-throughput/bench-c256
+369 SPEED-Bench prompts of at most 1024 tokens -> /bench/speedbench.json (17 longer ones dropped)
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "sweep_c256", "wall_s": 726.2, "completed": 768, "failed": 0, "output_tok_s": 323.9, "ttft_p50_ms": 39663, "ttft_p99_ms": 73379, "tpot_p50_ms": 565.04, "preemptions": 0, "per_user_tok_s": 1.8}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| sweep, max-concurrency 256, greedy, thinking off (prompts reused) | 323.9 | 1.8 | 39663 ms | - | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f5-throughput/bench-c256/summary.md
+rc=0

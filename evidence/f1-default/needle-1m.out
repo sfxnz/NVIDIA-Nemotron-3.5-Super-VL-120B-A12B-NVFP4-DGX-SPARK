@@ -1,0 +1,5 @@
+[PASS] H2   GET /v1/models lists served name (+max_model_len) (0.02s) max_model_len=1048576
+[PASS] L1   long-context needle retrieval (3 needles at 10/50/90% depth) (1178.81s) prompt_tokens=966500 ttft=1178.1s prefill~820 tok/s
+
+2/2 passed; hard failures: []
+rc=0

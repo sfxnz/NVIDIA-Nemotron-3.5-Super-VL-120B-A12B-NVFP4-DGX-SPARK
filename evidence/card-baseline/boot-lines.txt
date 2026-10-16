@@ -1,0 +1,30 @@
+(APIServer pid=1) INFO 10-15 22:12:31 [api_utils.py:357] non-default args: {'model_tag': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'host': '0.0.0.0', 'model': 'nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4', 'trust_remote_code': True, 'revision': '82d93699acd3be9e4617c53360fe5b3f5dbeb1b3', 'served_model_name': [
+(EngineCore pid=175) INFO 10-15 22:12:41 [core.py:133] Initializing a V1 LLM engine (v0.32.0rc1.dev190+g3f1bcfd82) with config: model='/root/.cache/huggingface/hub/models--nvidia--NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4/snapshots/82d93699acd3be9e4617c53360fe5b3f5dbeb1b3', speculative_config=SpeculativeConfig(method='dflash', model='nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4-LiLiCorr'
+(EngineCore pid=175) INFO 10-15 22:12:42 [__init__.py:803] Selected FlashInferFP8ScaledMMLinearKernel for MergedColumnParallelLinear
+(EngineCore pid=175) INFO 10-15 22:12:42 [__init__.py:803] Selected FlashInferFP8ScaledMMLinearKernel for RowParallelLinear
+(EngineCore pid=175) INFO 10-15 22:12:42 [__init__.py:1246] Using FlashInferCutlassNvFp4LinearKernel for NVFP4 GEMM
+(EngineCore pid=175) INFO 10-15 22:12:43 [nvfp4.py:314] Using 'FLASHINFER_CUTLASS' NvFp4 MoE backend out of potential backends: ['FLASHINFER_TRTLLM', 'FLASHINFER_CUTEDSL', 'FLASHINFER_CUTEDSL_BATCHED', 'FLASHINFER_CUTLASS', 'VLLM_CUTLASS', 'MARLIN', 'HUMMING', 'EMULATION'].
+(EngineCore pid=175) INFO 10-15 22:12:43 [__init__.py:803] Selected FlashInferFP8ScaledMMLinearKernel for QKVParallelLinear
+(EngineCore pid=175) INFO 10-15 22:12:46 [__init__.py:803] Selected FlashInferFP8ScaledMMLinearKernel for ParallelLMHead
+(EngineCore pid=175) INFO 10-15 22:19:58 [default_loader.py:501] Loading weights took 429.90 seconds
+(EngineCore pid=175) INFO 10-15 22:20:10 [__init__.py:1202] Using MarlinNvFp4LinearKernel for NVFP4 GEMM
+(EngineCore pid=175) INFO 10-15 22:20:19 [default_loader.py:501] Loading weights took 8.09 seconds
+(EngineCore pid=175) INFO 10-15 22:20:21 [model_runner.py:426] Model loading took 70.03 GiB memory and 459.090783 seconds
+(EngineCore pid=175) INFO 10-15 22:20:21 [interface.py:1105] Setting attention block size to 4544 tokens to ensure that attention page size is >= mamba page size.
+(EngineCore pid=175) INFO 10-15 22:20:21 [interface.py:1129] Padding mamba page size by 1.07% to ensure that mamba page size and attention page size are exactly equal.
+(EngineCore pid=175) INFO 10-15 22:20:24 [encoder_runner.py:131] Encoder cache will be initialized with a budget of 1048576 tokens, and profiled with 1 video items of the maximum feature size.
+(EngineCore pid=175) WARNING 10-15 22:21:11 [kv_cache_planning.py:494] Add 2 padding layers, may waste at most 25.00% KV cache memory
+(EngineCore pid=175) WARNING 10-15 22:21:11 [kv_cache_planning.py:1124] Speculative decoding (method=dflash) is enabled but no KV cache group could be identified as the draft model's.
+(EngineCore pid=175) INFO 10-15 22:21:11 [flashinfer.py:966] FlashInfer resolved query dtypes: prefill=torch.bfloat16, decode=torch.bfloat16, decode_backend=xqa, kv_cache_dtype=torch.float8_e4m3fn, arch=sm121
+(EngineCore pid=175) INFO 10-15 22:21:11 [ssu_dispatch.py:346] Using FlashInfer Mamba SSU algorithm: auto
+(EngineCore pid=175) INFO 10-15 22:21:11 [ssu_dispatch.py:635] Using flashinfer Mamba SSU backend.
+(EngineCore pid=175) WARNING 10-15 22:21:45 [flashinfer.py:1455] Using FlashInfer for draft model non-causal attention; TRTLLM can still be used for target model causal attention.
+(EngineCore pid=175) INFO 10-15 22:21:50 [model_runner.py:1128] Graph capturing finished in 39 secs, took 1.70 GiB
+(EngineCore pid=175) INFO 10-15 22:21:51 [gpu_worker.py:747] Available KV cache memory: 21.25 GiB
+(EngineCore pid=175) WARNING 10-15 22:21:51 [kv_cache_planning.py:494] Add 2 padding layers, may waste at most 25.00% KV cache memory
+(EngineCore pid=175) WARNING 10-15 22:21:51 [kv_cache_planning.py:1124] Speculative decoding (method=dflash) is enabled but no KV cache group could be identified as the draft model's.
+(EngineCore pid=175) INFO 10-15 22:21:51 [kv_cache_utils.py:1067] GPU KV cache size: 2,218,185 tokens, Maximum concurrency for 1,048,576 tokens per request: 2.12x
+(EngineCore pid=175) INFO 10-15 22:21:51 [kv_cache_utils.py:831] kv cache group sizes (4544, 4544, 4544, 4544, 4544, 4544, 4544, 4544, 4544, 4544, 64)
+(EngineCore pid=175) INFO 10-15 22:24:20 [model_runner.py:1128] Graph capturing finished in 8 secs, took 0.22 GiB
+(EngineCore pid=175) INFO 10-15 22:24:21 [core.py:395] init engine (profile, create kv cache, warmup model) took 239.96 s (compilation: 25.43 s)
+(APIServer pid=1) INFO 10-15 22:24:40 [entry.py:140] Starting vLLM server on http://0.0.0.0:8000

@@ -1,0 +1,18 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 24, sets decode,sweep,prefill, levels 24
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/e4-mnbt4608/bench
+{"cell": "decode_c1_greedy", "wall_s": 132.4, "completed": 16, "failed": 0, "output_tok_s": 41.4, "ttft_p50_ms": 366, "ttft_p99_ms": 624, "tpot_p50_ms": 20.46, "preemptions": 0, "per_user_tok_s": 48.9, "accept_len": 4.48}
+{"cell": "decode_c1_card_sampling", "wall_s": 109.7, "completed": 8, "failed": 0, "output_tok_s": 42.3, "ttft_p50_ms": 361, "ttft_p99_ms": 620, "tpot_p50_ms": 20.97, "preemptions": 0, "per_user_tok_s": 47.7, "accept_len": 4.52}
+{"cell": "sweep_c24", "wall_s": 120.9, "completed": 72, "failed": 0, "output_tok_s": 190.4, "ttft_p50_ms": 1543, "ttft_p99_ms": 2972, "tpot_p50_ms": 95.08, "preemptions": 0, "per_user_tok_s": 10.5, "accept_len": 4.5}
+{"cell": "prefill_8k", "wall_s": 17.2, "completed": 3, "failed": 0, "output_tok_s": 0.3, "ttft_p50_ms": 3297, "ttft_p99_ms": 3299, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_32k", "wall_s": 34.4, "completed": 2, "failed": 0, "output_tok_s": 0.1, "ttft_p50_ms": 13518, "ttft_p99_ms": 13522, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_128k", "wall_s": 73.2, "completed": 1, "failed": 0, "output_tok_s": 0.0, "ttft_p50_ms": 65409, "ttft_p99_ms": 65409, "tpot_p50_ms": 0.0, "preemptions": 0}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 41.4 | 48.9 | 366 ms | - | 4.48 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 42.3 | 47.7 | 361 ms | - | 4.52 | 0 |
+| sweep, max-concurrency 24, greedy, thinking off | 190.4 | 10.5 | 1543 ms | - | 4.5 | 0 |
+| prefill, 8192 random tokens, max-concurrency 1 | 0.3 | - | 3297 ms | 2485 | - | 0 |
+| prefill, 32768 random tokens, max-concurrency 1 | 0.1 | - | 13518 ms | 2424 | - | 0 |
+| prefill, 131072 random tokens, max-concurrency 1 | 0.0 | - | 65409 ms | 2004 | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/e4-mnbt4608/bench/summary.md
+rc=0

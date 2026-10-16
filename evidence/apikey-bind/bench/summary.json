@@ -1,0 +1,16 @@
+[
+ {
+  "cell": "sweep_c1",
+  "wall_s": 75.1,
+  "completed": 8,
+  "failed": 0,
+  "output_tok_s": 36.6,
+  "ttft_p50_ms": 322,
+  "ttft_p99_ms": 576,
+  "tpot_p50_ms": 27.03,
+  "preemptions": 0,
+  "per_user_tok_s": 37.0,
+  "accept_len": 3.99,
+  "label": "sweep, max-concurrency 1, greedy, thinking off"
+ }
+]

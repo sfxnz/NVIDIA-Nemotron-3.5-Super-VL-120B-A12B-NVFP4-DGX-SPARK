@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: sudo apt-get update && sudo apt-get install -y shellcheck
+      - run: shellcheck -S style run.sh stop.sh bench.sh test.sh tools/memguard.sh
+
+  validate-only:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: default and throughput profiles resolve
+        run: |
+          VALIDATE_ONLY=1 ./run.sh | tee default.txt
+          grep -F -- '--speculative-config' default.txt
+          grep -F -- '--block-size 256' default.txt
+          EXTRA_ARGS='--enable-log-requests' VALIDATE_ONLY=1 ./run.sh | grep -F -- '--enable-log-requests'
+          IMAGES_PER_PROMPT=0 VALIDATE_ONLY=1 ./run.sh | grep -F -- '--language-model-only'
+          VALIDATE_ONLY=1 PROFILE=throughput ./run.sh | tee throughput.txt
+          if grep -F -- '--speculative-config' throughput.txt; then exit 1; fi
+      - name: bad settings are refused
+        run: |
+          set -u
+          refuse() {  # MESSAGE ENV...
+            local msg="$1"; shift
+            if env "$@" VALIDATE_ONLY=1 ./run.sh >/dev/null 2>err.txt; then echo "accepted: $*"; exit 1; fi
+            grep -F -- "$msg" err.txt || { cat err.txt; exit 1; }
+          }
+          refuse 'use default or throughput' PROFILE=fast
+          refuse 'is not a valid port' PORT=0
+          refuse 'is not a valid port' PORT=08000
+          refuse 'must be 1..512' MAX_NUM_SEQS=0
+          refuse 'must be 4..40' KV_CACHE_GIB=64
+          refuse 'must be an IPv4 address' BIND=localhost
+          refuse 'run.sh owns it' EXTRA_ARGS=--max-num-seqs=4
+          refuse 'run.sh owns it' EXTRA_ARGS=--max_model_len=4096
+          refuse 'run.sh owns it' 'EXTRA_ARGS=-sc {}'
+          refuse 'run.sh owns it' 'EXTRA_ARGS=--speculative_config.num_speculative_tokens=3'
+          refuse 'run.sh owns it' EXTRA_ARGS=--limit-mm-per-prompt.video=1
+          refuse 'run.sh owns it' EXTRA_ARGS=--no-enable-prefix-caching
+          refuse 'run.sh owns it' EXTRA_ARGS=--max-num
+          refuse 'must be an IPv4 address' BIND=999.1.1.1
+          refuse 'must be 1024..1048576' MAX_MODEL_LEN=2000000
+
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 -m py_compile tools/*.py

@@ -1,0 +1,3 @@
+[PASS] C7   thinking_token_budget caps reasoning (proof prompt: ~350 reasoning tokens unbounded) and an answer follows (5.61s) reasoning_tokens=31 with budget 32
+
+1/1 executed checks passed; skipped: []; soft warnings: []; hard failures: []

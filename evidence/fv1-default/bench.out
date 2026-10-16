@@ -1,0 +1,19 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets decode,sweep, levels 1,8,24,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/fv1-default/bench
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "decode_c1_greedy", "wall_s": 137.7, "completed": 16, "failed": 0, "output_tok_s": 38.6, "ttft_p50_ms": 341, "ttft_p99_ms": 591, "tpot_p50_ms": 24.74, "preemptions": 0, "per_user_tok_s": 40.4, "accept_len": 4.25}
+{"cell": "decode_c1_card_sampling", "wall_s": 133.0, "completed": 8, "failed": 0, "output_tok_s": 35.4, "ttft_p50_ms": 323, "ttft_p99_ms": 582, "tpot_p50_ms": 26.83, "preemptions": 0, "per_user_tok_s": 37.3, "accept_len": 3.79}
+{"cell": "sweep_c1", "wall_s": 75.6, "completed": 8, "failed": 0, "output_tok_s": 40.0, "ttft_p50_ms": 318, "ttft_p99_ms": 585, "tpot_p50_ms": 25.36, "preemptions": 0, "per_user_tok_s": 39.4, "accept_len": 4.36}
+{"cell": "sweep_c8", "wall_s": 83.8, "completed": 24, "failed": 0, "output_tok_s": 98.5, "ttft_p50_ms": 969, "ttft_p99_ms": 1150, "tpot_p50_ms": 55.85, "preemptions": 0, "per_user_tok_s": 17.9, "accept_len": 4.45}
+{"cell": "sweep_c24", "wall_s": 117.6, "completed": 72, "failed": 0, "output_tok_s": 177.4, "ttft_p50_ms": 1554, "ttft_p99_ms": 2387, "tpot_p50_ms": 91.31, "preemptions": 0, "per_user_tok_s": 11.0, "accept_len": 4.59}
+{"cell": "sweep_c32", "wall_s": 156.6, "completed": 96, "failed": 0, "output_tok_s": 188.0, "ttft_p50_ms": 7326, "ttft_p99_ms": 17000, "tpot_p50_ms": 94.53, "preemptions": 0, "per_user_tok_s": 10.6, "accept_len": 4.46}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 38.6 | 40.4 | 341 ms | - | 4.25 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 35.4 | 37.3 | 323 ms | - | 3.79 | 0 |
+| sweep, max-concurrency 1, greedy, thinking off | 40.0 | 39.4 | 318 ms | - | 4.36 | 0 |
+| sweep, max-concurrency 8, greedy, thinking off | 98.5 | 17.9 | 969 ms | - | 4.45 | 0 |
+| sweep, max-concurrency 24, greedy, thinking off | 177.4 | 11.0 | 1554 ms | - | 4.59 | 0 |
+| sweep, max-concurrency 32, greedy, thinking off | 188.0 | 10.6 | 7326 ms | - | 4.46 | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/fv1-default/bench/summary.md
+rc=0

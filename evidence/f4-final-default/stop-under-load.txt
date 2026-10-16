@@ -1,0 +1,9 @@
+stop.sh rc 0 took 60.8 s
+Stopping nemotron-3.5-super-vl (up to 60s for in-flight requests)
+Stopped nemotron-3.5-super-vl. Memory now: 113.9 GiB available 
+client 0 error RemoteDisconnected: Remote end closed connection without response after 75.1s
+client 1 error RemoteDisconnected: Remote end closed connection without response after 75.1s
+client 2 error RemoteDisconnected: Remote end closed connection without response after 75.1s
+client 3 error RemoteDisconnected: Remote end closed connection without response after 75.1s
+container left: none
+memguard left: 2951348

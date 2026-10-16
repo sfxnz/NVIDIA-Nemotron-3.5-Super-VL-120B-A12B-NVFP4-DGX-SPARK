@@ -1,0 +1,13 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets prefill, levels 1,2,4,8,16,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-cardlike/bench
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "prefill_8k", "wall_s": 19.0, "completed": 3, "failed": 0, "output_tok_s": 0.3, "ttft_p50_ms": 2892, "ttft_p99_ms": 3166, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_32k", "wall_s": 34.9, "completed": 2, "failed": 0, "output_tok_s": 0.1, "ttft_p50_ms": 13465, "ttft_p99_ms": 13570, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_128k", "wall_s": 74.4, "completed": 1, "failed": 0, "output_tok_s": 0.0, "ttft_p50_ms": 66465, "ttft_p99_ms": 66465, "tpot_p50_ms": 0.0, "preemptions": 0}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| prefill, 8192 random tokens, max-concurrency 1 | 0.3 | - | 2892 ms | 2832 | - | 0 |
+| prefill, 32768 random tokens, max-concurrency 1 | 0.1 | - | 13465 ms | 2434 | - | 0 |
+| prefill, 131072 random tokens, max-concurrency 1 | 0.0 | - | 66465 ms | 1972 | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-cardlike/bench/summary.md
+rc=0

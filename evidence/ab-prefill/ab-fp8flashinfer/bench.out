@@ -1,0 +1,17 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets decode,prefill, levels 1,2,4,8,16,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-fp8flashinfer/bench
+369 distinct prompts; sweep cells needing more reuse them
+{"cell": "decode_c1_greedy", "wall_s": 242.8, "completed": 32, "failed": 0, "output_tok_s": 41.9, "ttft_p50_ms": 403, "ttft_p99_ms": 606, "tpot_p50_ms": 21.86, "preemptions": 0, "per_user_tok_s": 45.7, "accept_len": 4.66}
+{"cell": "decode_c1_card_sampling", "wall_s": 233.3, "completed": 16, "failed": 0, "output_tok_s": 37.0, "ttft_p50_ms": 351, "ttft_p99_ms": 595, "tpot_p50_ms": 27.12, "preemptions": 0, "per_user_tok_s": 36.9, "accept_len": 4.0}
+{"cell": "prefill_8k", "wall_s": 16.7, "completed": 3, "failed": 0, "output_tok_s": 0.3, "ttft_p50_ms": 3182, "ttft_p99_ms": 3213, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_32k", "wall_s": 33.4, "completed": 2, "failed": 0, "output_tok_s": 0.1, "ttft_p50_ms": 12944, "ttft_p99_ms": 12946, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_128k", "wall_s": 70.8, "completed": 1, "failed": 0, "output_tok_s": 0.0, "ttft_p50_ms": 62752, "ttft_p99_ms": 62752, "tpot_p50_ms": 0.0, "preemptions": 0}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 41.9 | 45.7 | 403 ms | - | 4.66 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 37.0 | 36.9 | 351 ms | - | 4.0 | 0 |
+| prefill, 8192 random tokens, max-concurrency 1 | 0.3 | - | 3182 ms | 2574 | - | 0 |
+| prefill, 32768 random tokens, max-concurrency 1 | 0.1 | - | 12944 ms | 2532 | - | 0 |
+| prefill, 131072 random tokens, max-concurrency 1 | 0.0 | - | 62752 ms | 2089 | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/ab-fp8flashinfer/bench/summary.md
+rc=0

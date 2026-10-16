@@ -1,0 +1,26 @@
+==> nemotron-3.5-super-vl at http://127.0.0.1:8000, max-num-seqs 32, sets decode,sweep,prefill, levels 1,8,16,24,32
+==> results in /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f2-default-262k/bench
+{"cell": "decode_c1_greedy", "wall_s": 136.8, "completed": 16, "failed": 0, "output_tok_s": 40.9, "ttft_p50_ms": 368, "ttft_p99_ms": 624, "tpot_p50_ms": 22.14, "preemptions": 0, "per_user_tok_s": 45.2, "accept_len": 4.46}
+{"cell": "decode_c1_card_sampling", "wall_s": 114.2, "completed": 8, "failed": 0, "output_tok_s": 41.9, "ttft_p50_ms": 366, "ttft_p99_ms": 621, "tpot_p50_ms": 21.92, "preemptions": 0, "per_user_tok_s": 45.6, "accept_len": 4.45}
+{"cell": "sweep_c1", "wall_s": 62.1, "completed": 8, "failed": 0, "output_tok_s": 39.4, "ttft_p50_ms": 364, "ttft_p99_ms": 627, "tpot_p50_ms": 23.4, "preemptions": 0, "per_user_tok_s": 42.7, "accept_len": 4.33}
+{"cell": "sweep_c8", "wall_s": 79.9, "completed": 24, "failed": 0, "output_tok_s": 106.3, "ttft_p50_ms": 992, "ttft_p99_ms": 1270, "tpot_p50_ms": 64.32, "preemptions": 0, "per_user_tok_s": 15.5, "accept_len": 4.7}
+{"cell": "sweep_c16", "wall_s": 105.4, "completed": 48, "failed": 0, "output_tok_s": 148.6, "ttft_p50_ms": 1318, "ttft_p99_ms": 2050, "tpot_p50_ms": 83.5, "preemptions": 0, "per_user_tok_s": 12.0, "accept_len": 4.48}
+{"cell": "sweep_c24", "wall_s": 122.9, "completed": 72, "failed": 0, "output_tok_s": 186.0, "ttft_p50_ms": 1553, "ttft_p99_ms": 3285, "tpot_p50_ms": 94.4, "preemptions": 0, "per_user_tok_s": 10.6, "accept_len": 4.5}
+{"cell": "sweep_c32", "wall_s": 149.3, "completed": 96, "failed": 0, "output_tok_s": 204.6, "ttft_p50_ms": 4628, "ttft_p99_ms": 11411, "tpot_p50_ms": 105.64, "preemptions": 0, "per_user_tok_s": 9.5, "accept_len": 4.4}
+{"cell": "prefill_8k", "wall_s": 17.1, "completed": 3, "failed": 0, "output_tok_s": 0.3, "ttft_p50_ms": 3276, "ttft_p99_ms": 3287, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_32k", "wall_s": 34.1, "completed": 2, "failed": 0, "output_tok_s": 0.1, "ttft_p50_ms": 13322, "ttft_p99_ms": 13337, "tpot_p50_ms": 0.0, "preemptions": 0}
+{"cell": "prefill_128k", "wall_s": 72.2, "completed": 1, "failed": 0, "output_tok_s": 0.0, "ttft_p50_ms": 64590, "ttft_p99_ms": 64590, "tpot_p50_ms": 0.0, "preemptions": 0}
+| Cell | Output tok/s (all users) | Per-user tok/s (1/TPOT p50) | TTFT p50 | Prefill tok/s | Accept len | Preempt |
+|---|---:|---:|---:|---:|---:|---:|
+| decode, max-concurrency 1, greedy, thinking off | 40.9 | 45.2 | 368 ms | - | 4.46 | 0 |
+| decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on | 41.9 | 45.6 | 366 ms | - | 4.45 | 0 |
+| sweep, max-concurrency 1, greedy, thinking off | 39.4 | 42.7 | 364 ms | - | 4.33 | 0 |
+| sweep, max-concurrency 8, greedy, thinking off | 106.3 | 15.5 | 992 ms | - | 4.7 | 0 |
+| sweep, max-concurrency 16, greedy, thinking off | 148.6 | 12.0 | 1318 ms | - | 4.48 | 0 |
+| sweep, max-concurrency 24, greedy, thinking off | 186.0 | 10.6 | 1553 ms | - | 4.5 | 0 |
+| sweep, max-concurrency 32, greedy, thinking off | 204.6 | 9.5 | 4628 ms | - | 4.4 | 0 |
+| prefill, 8192 random tokens, max-concurrency 1 | 0.3 | - | 3276 ms | 2500 | - | 0 |
+| prefill, 32768 random tokens, max-concurrency 1 | 0.1 | - | 13322 ms | 2460 | - | 0 |
+| prefill, 131072 random tokens, max-concurrency 1 | 0.0 | - | 64590 ms | 2029 | - | 0 |
+==> summary: /tmp/claude-1000/-home-sfxnz-projects-ai-lab-recipes-NVIDIA-Nemotron-3-5-Super-VL-120B-A12B-NVFP4-DGX-SPARK/ed423547-af69-4f64-a551-32ddd0b572a3/scratchpad/exp/f2-default-262k/bench/summary.md
+rc=0

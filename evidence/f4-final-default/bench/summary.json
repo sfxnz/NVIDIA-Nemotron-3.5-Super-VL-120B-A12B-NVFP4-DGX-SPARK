@@ -1,0 +1,30 @@
+[
+ {
+  "cell": "decode_c1_greedy",
+  "wall_s": 138.4,
+  "completed": 16,
+  "failed": 0,
+  "output_tok_s": 39.8,
+  "ttft_p50_ms": 365,
+  "ttft_p99_ms": 629,
+  "tpot_p50_ms": 23.4,
+  "preemptions": 0,
+  "per_user_tok_s": 42.7,
+  "accept_len": 4.36,
+  "label": "decode, max-concurrency 1, greedy, thinking off"
+ },
+ {
+  "cell": "decode_c1_card_sampling",
+  "wall_s": 116.7,
+  "completed": 8,
+  "failed": 0,
+  "output_tok_s": 40.8,
+  "ttft_p50_ms": 366,
+  "ttft_p99_ms": 622,
+  "tpot_p50_ms": 21.04,
+  "preemptions": 0,
+  "per_user_tok_s": 47.5,
+  "accept_len": 4.43,
+  "label": "decode, max-concurrency 1, T=1.0 top_p 0.95, thinking on"
+ }
+]

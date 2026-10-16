@@ -1,0 +1,32 @@
+mamba.in_proj   M= 256 torch=   452.6us(  168GB/s) cutlass=   404.3us(  188GB/s) flashinfer_auto=   448.7us(  169GB/s) flashinfer_cutlass=   461.4us(  165GB/s) flashinfer_cublas=   445.8us(  171GB/s)
+mamba.in_proj   M=1024 torch=   944.8us(   80GB/s) cutlass=   902.9us(   84GB/s) flashinfer_auto=   964.9us(   79GB/s) flashinfer_cutlass=   931.8us(   82GB/s) flashinfer_cublas=   964.1us(   79GB/s)
+mamba.in_proj   M=2048 torch=  1789.0us(   42GB/s) cutlass=  1753.6us(   43GB/s) flashinfer_auto=  1852.2us(   41GB/s) flashinfer_cutlass=  1874.0us(   41GB/s) flashinfer_cublas=  1776.7us(   43GB/s)
+mamba.in_proj   M=4608 torch=  3962.6us(   19GB/s) cutlass=  5215.6us(   15GB/s) flashinfer_auto=  5627.0us(   14GB/s) flashinfer_cutlass=  5683.4us(   13GB/s) flashinfer_cublas=  3933.8us(   19GB/s)
+mamba.in_proj   M=8192 torch=  6799.7us(   11GB/s) cutlass= 23542.9us(    3GB/s) flashinfer_auto= 24363.8us(    3GB/s) flashinfer_cutlass= 24364.9us(    3GB/s) flashinfer_cublas=  6820.3us(   11GB/s)
+mamba.out_proj  M= 256 torch=   177.0us(  190GB/s) cutlass=   188.1us(  178GB/s) flashinfer_auto=   237.8us(  141GB/s) flashinfer_cutlass=   223.3us(  150GB/s) flashinfer_cublas=   178.9us(  188GB/s)
+mamba.out_proj  M=1024 torch=   461.5us(   73GB/s) cutlass=   404.5us(   83GB/s) flashinfer_auto=   431.3us(   78GB/s) flashinfer_cutlass=   439.3us(   76GB/s) flashinfer_cublas=   456.4us(   74GB/s)
+mamba.out_proj  M=2048 torch=   767.5us(   44GB/s) cutlass=   814.9us(   41GB/s) flashinfer_auto=   889.3us(   38GB/s) flashinfer_cutlass=   858.2us(   39GB/s) flashinfer_cublas=   766.9us(   44GB/s)
+mamba.out_proj  M=4608 torch=  1606.2us(   21GB/s) cutlass=  4002.0us(    8GB/s) flashinfer_auto=  4020.2us(    8GB/s) flashinfer_cutlass=  4024.9us(    8GB/s) flashinfer_cublas=  1635.0us(   21GB/s)
+mamba.out_proj  M=8192 torch=  2955.2us(   11GB/s) cutlass=  7181.9us(    5GB/s) flashinfer_auto=  7188.0us(    5GB/s) flashinfer_cutlass=  7228.2us(    5GB/s) flashinfer_cublas=  2917.7us(   12GB/s)
+attn.qkv        M= 256 torch=    72.1us(  262GB/s) cutlass=    85.3us(  221GB/s) flashinfer_auto=    88.9us(  212GB/s) flashinfer_cutlass=    92.5us(  204GB/s) flashinfer_cublas=   102.4us(  184GB/s)
+attn.qkv        M=1024 torch=   257.4us(   73GB/s) cutlass=   239.3us(   79GB/s) flashinfer_auto=   244.7us(   77GB/s) flashinfer_cutlass=   244.4us(   77GB/s) flashinfer_cublas=   245.3us(   77GB/s)
+attn.qkv        M=2048 torch=   466.7us(   40GB/s) cutlass=   440.5us(   43GB/s) flashinfer_auto=   460.5us(   41GB/s) flashinfer_cutlass=   461.2us(   41GB/s) flashinfer_cublas=   430.2us(   44GB/s)
+attn.qkv        M=4608 torch=  1069.4us(   18GB/s) cutlass=  1058.0us(   18GB/s) flashinfer_auto=  1098.9us(   17GB/s) flashinfer_cutlass=  1098.3us(   17GB/s) flashinfer_cublas=  1018.0us(   19GB/s)
+attn.qkv        M=8192 torch=  1780.0us(   11GB/s) cutlass=  1888.0us(   10GB/s) flashinfer_auto=  2011.0us(    9GB/s) flashinfer_cutlass=  1968.0us(   10GB/s) flashinfer_cublas=  1788.0us(   11GB/s)
+attn.o          M= 256 torch=    66.7us(  252GB/s) cutlass=    81.7us(  205GB/s) flashinfer_auto=    84.3us(  199GB/s) flashinfer_cutlass=    83.5us(  201GB/s) flashinfer_cublas=    84.5us(  198GB/s)
+attn.o          M=1024 torch=   232.2us(   72GB/s) cutlass=   225.9us(   74GB/s) flashinfer_auto=   237.1us(   71GB/s) flashinfer_cutlass=   236.8us(   71GB/s) flashinfer_cublas=   211.3us(   79GB/s)
+attn.o          M=2048 torch=   413.5us(   41GB/s) cutlass=   404.3us(   42GB/s) flashinfer_auto=   425.3us(   39GB/s) flashinfer_cutlass=   420.1us(   40GB/s) flashinfer_cublas=   406.8us(   41GB/s)
+attn.o          M=4608 torch=   886.2us(   19GB/s) cutlass=   891.7us(   19GB/s) flashinfer_auto=   933.1us(   18GB/s) flashinfer_cutlass=   931.9us(   18GB/s) flashinfer_cublas=   861.3us(   19GB/s)
+attn.o          M=8192 torch=  1577.7us(   11GB/s) cutlass=  1598.3us(   10GB/s) flashinfer_auto=  1664.5us(   10GB/s) flashinfer_cutlass=  1689.2us(   10GB/s) flashinfer_cublas=  1528.0us(   11GB/s)
+lm_head         M= 256 torch=  2896.1us(  185GB/s) cutlass=  2796.4us(  192GB/s) flashinfer_auto=  2838.6us(  189GB/s) flashinfer_cutlass=  2865.6us(  187GB/s) flashinfer_cublas=  2839.1us(  189GB/s)
+lm_head         M=1024 torch=  5962.1us(   90GB/s) cutlass=  6196.8us(   87GB/s) flashinfer_auto=  6474.6us(   83GB/s) flashinfer_cutlass=  6441.4us(   83GB/s) flashinfer_cublas=  5997.5us(   90GB/s)
+lm_head         M=2048 torch= 12139.8us(   44GB/s) cutlass= 12605.9us(   43GB/s) flashinfer_auto= 13288.8us(   40GB/s) flashinfer_cutlass= 13132.3us(   41GB/s) flashinfer_cublas= 12173.7us(   44GB/s)
+lm_head         M=4608 torch= 27616.2us(   19GB/s) cutlass= 32644.4us(   16GB/s) flashinfer_auto= 35598.6us(   15GB/s) flashinfer_cutlass= 35624.8us(   15GB/s) flashinfer_cublas= 27596.6us(   19GB/s)
+lm_head         M=8192 torch= 49103.3us(   11GB/s) cutlass=163162.4us(    3GB/s) flashinfer_auto=171325.8us(    3GB/s) flashinfer_cutlass=171301.1us(    3GB/s) flashinfer_cublas= 46763.0us(   11GB/s)
+
+Per-decode-step FP8 total (ms) by M:
+  torch              M256= 29.19 M1024= 66.13 M2048=121.44 M4608=266.01 M8192=466.16
+  cutlass            M256= 27.83 M1024= 62.21 M2048=122.10 M4608=416.94 M8192=1420.05
+  flashinfer_auto    M256= 31.69 M1024= 66.18 M2048=130.03 M4608=437.75 M8192=1462.80
+  flashinfer_cutlass M256= 31.66 M1024= 65.13 M2048=129.47 M4608=440.20 M8192=1464.28
+  flashinfer_cublas  M256= 29.32 M1024= 66.47 M2048=120.61 M4608=265.39 M8192=462.81
